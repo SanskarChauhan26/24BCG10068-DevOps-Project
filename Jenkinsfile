@@ -106,7 +106,7 @@ pipeline {
             steps {
                 echo "Checking Deployment..."
 
-                bat 'kubectl rollout status deployment/college-event'
+                bat 'kubectl rollout status deployment/college-event-deployment'
 
                 bat 'kubectl get deployments'
 
