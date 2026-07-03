@@ -8,9 +8,10 @@ pipeline {
     }
 
     environment {
-        IMAGE_NAME = "collegeeventweb"
-        IMAGE_TAG = "v1"
-    }
+    IMAGE_NAME = "collegeeventweb"
+    IMAGE_TAG = "v1"
+    KUBECONFIG = "C:\\Users\\H.P\\.kube\\config"
+}
 
     stages {
 
@@ -114,6 +115,12 @@ pipeline {
                 bat 'kubectl get svc'
             }
         }
+        stage('Debug Kube Context') {
+    steps {
+        bat 'kubectl config view'
+        bat 'kubectl config current-context'
+    }
+}
 
     }
 
