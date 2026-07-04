@@ -13,7 +13,7 @@ spec:
         app: college-event
     spec:
       containers:
-        - name: college-event-container
+        - name: college-event
           image: collegeeventweb:v1
           imagePullPolicy: IfNotPresent
           ports:
